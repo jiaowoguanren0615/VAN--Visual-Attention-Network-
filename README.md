@@ -21,8 +21,8 @@ If you download the pre-trained weights, you should enter train.py and set the '
     ├── my_dataset.py: Customize reading data sets and define transforms data enhancement methods
     ├── split_data.py: Define the function to read the image dataset and divide the training-set and test-set
     ├── threeaugment.py: Additional data augmentation methods
-├── models: VOLO Model
-    ├── build_models.py: Construct VOLO models
+├── models: VAN Model
+    ├── build_models.py: Construct VAN models
 ├── util:
     ├── engine.py: Function code for a training/validation process
     ├── losses.py: Knowledge distillation loss, combined with teacher model (if any)
@@ -40,7 +40,7 @@ Before you use the code to train your own data set, please first enter the ___tr
 You can use anther optimizer sophia, just need to change the optimizer in ___train_gpu.py___, for this training sample, can achieve better results
 ```
 # optimizer = create_optimizer(args, model_without_ddp)
-optimizer = SophiaG(model.parameters(), lr=2e-4, betas=(0.965, 0.99), rho=0.01, weight_decay=args.weight_decay)
+optimizer = SophiaG(model_without_ddp.parameters(), lr=2e-4, betas=(0.965, 0.99), rho=0.01, weight_decay=args.weight_decay)
 ```
 
 ## Train this model
