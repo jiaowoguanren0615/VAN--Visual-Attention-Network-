@@ -5,6 +5,8 @@ This is a warehouse for VAN-pytorch-model, can be used to train your image-datas
 The code mainly comes from [official source code](https://github.com/Visual-Attention-Network/VAN-Classification).  
 
 ## Preparation
+### Configure the environment
+[Tutorial steps](https://github.com/jiaowoguanren0615/PytorchLearning)
 ### Download the dataset: 
 [flower_dataset](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition).
 ### Download the pretrained_weights
